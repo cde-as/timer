@@ -8,7 +8,8 @@ const timer = function() {
   const sortedTime = time.sort((a, b) => a - b); //Input will be sorted
   
   for (let i = 0; i < sortedTime.length; i++) {
-    if (sortedTime[i] < 0) {
+    
+    if (sortedTime[i] < 0 || isNaN(sortedTime[i])) {
       process.exit(1);
     }
     setTimeout(() => {
